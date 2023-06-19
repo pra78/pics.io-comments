@@ -1,9 +1,11 @@
 import React from "react";
+import Home from "pages/Home/Home";
+
 
 function App() {
   return (
     <React.Fragment>
-      <h1>TEST</h1>
+      <Home/>
     </React.Fragment>
   );
 }
