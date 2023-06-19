@@ -20,7 +20,7 @@
 
 <p>Test Task: https://docs.google.com/document/d/1H1-sJc_4RdBdY1Or0KBF-J14NYovEQT0rvpxI7MEKZY/edit</p>
 
-![screenshot](../pics.io-comments/src/images/screenshot.png)
+![screenshot](/src/images/screenshot.png)
 
 ## Key Features
 
