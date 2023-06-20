@@ -5,7 +5,7 @@ const initialState = {
   isLoading: false,
   error: null,
   comments: [],
-  userInput: null,
+  userInput: "",
 };
 
 const commentsSlice = createSlice({
@@ -13,13 +13,16 @@ const commentsSlice = createSlice({
   initialState,
   reducers: {
     addComment(state, { payload }) {
-      return { ...state, ...payload };
+      state.comments.push(payload);
     },
     deleteComment(state, { payload }) {
       const index = state.comments.findIndex(
-        (comment) => comment.id === payload.id
+        (comment) => comment.id === payload
       );
       state.comments.splice(index, 1);
+    },
+    updateUserInput(state, { payload }) {
+      state.userInput = payload;
     },
   },
   extraReducers: (builder) => {
@@ -42,5 +45,6 @@ const commentsSlice = createSlice({
   },
 });
 
-export const { addComment, deleteCommennt } = commentsSlice.actions;
+export const { addComment, deleteComment, updateUserInput } =
+  commentsSlice.actions;
 export default commentsSlice.reducer;
